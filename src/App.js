@@ -1,25 +1,44 @@
-import logo from './logo.svg';
+// App.js
+import React, { useState } from 'react';
+import AddressList from './components/AddressList';
+import AddressForm from './components/AddressForm';
 import './App.css';
 
-function App() {
+const App = () => {
+  const [addresses, setAddresses] = useState([]);
+  const [editingAddress, setEditingAddress] = useState(null);
+
+  const handleAddAddress = (address) => {
+    setAddresses([...addresses, address]);
+  };
+
+  const handleEditAddress = (updatedAddress) => {
+    setAddresses(addresses.map(address => address.id === updatedAddress.id ? updatedAddress : address));
+  };
+
+  const handleDeleteAddress = (id) => {
+    setAddresses(addresses.filter(address => address.id !== id));
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app-container">
+      <div className="address-list-container">
+        <AddressList 
+          addresses={addresses} 
+          onEdit={setEditingAddress} 
+          onDelete={handleDeleteAddress}
+          onPinClick={(address) => console.log('Pin clicked for', address)}
+        />
+      </div>
+      <div className="address-form-container">
+        <AddressForm 
+          onSave={editingAddress ? handleEditAddress : handleAddAddress} 
+          address={editingAddress} 
+          onCancel={() => setEditingAddress(null)} 
+        />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
