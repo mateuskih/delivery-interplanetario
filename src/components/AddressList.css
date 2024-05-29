@@ -2,52 +2,51 @@
   --border-color: #ddd;
   --border-radius: 8px;
   --button-padding: 10px 20px;
-  --primary-color: #3498db; /* Alterando a cor primária para verde */
-  --secondary-color: #f5625d; /* Alterando a cor secundária para azul */
+  --primary-color: #3498db;
+  --secondary-color: #f5625d;
 }
 
-/* Estilos básicos */
 .address-list {
-  background-color: #fff; /* Suavizando a cor de fundo */
+  background-color: #fff;
   border-radius: var(--border-radius);
-  padding: 30px; /* Aumentando o espaço interno */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Ajustando a sombra */
-  max-width: 900px; /* Aumentando a largura máxima */
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
   margin: auto;
 }
 
 .search-bar {
   width: 100%;
   padding: 14px;
-  margin-bottom: 30px; /* Aumentando o espaço abaixo */
+  margin-bottom: 30px;
   border: 1px solid var(--border-color);
-  border-radius: 6px; /* Suavizando as bordas */
-  font-size: 1.1em; /* Aumentando o tamanho da fonte */
+  border-radius: 6px;
+  font-size: 1.1em;
   box-sizing: border-box;
 }
 
 .address-card::before {
   content: "";
   position: absolute;
-  top: 10px; /* Ajuste a posição vertical conforme necessário */
-  right: 10px; /* Ajuste a posição horizontal conforme necessário */
-  width: 12px; /* Ajuste o tamanho da bolinha conforme necessário */
-  height: 12px; /* Ajuste o tamanho da bolinha conforme necessário */
-  border: 2px solid #3498db; /* Adicionando contorno azul */
-  border-radius: 50%; /* Formato de círculo */
+  top: 10px;
+  right: 10px;
+  width: 12px;
+  height: 12px;
+  border: 2px solid #3498db;
+  border-radius: 50%;
 }
 
 .address-card.selected::before {
-  background-color: #3498db; /* Preenchendo a bolinha quando estiver selecionado */
+  background-color: #3498db;
 }
 
 .address-card {
   background-color: #fff;
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
-  margin-bottom: 20px; /* Aumentando o espaço abaixo */
+  margin-bottom: 20px;
   padding: 20px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Ajustando a sombra */
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease;
@@ -60,7 +59,7 @@
 }
 
 .address-card:hover {
-  transform: translateY(-6px); /* Aumentando o efeito de hover */
+  transform: translateY(-6px);
 }
 
 .address-card-body {
@@ -75,7 +74,7 @@
 }
 
 .map-thumbnail {
-  margin-right: 15px; /* Aumentando o espaço à direita */
+  margin-right: 15px;
 }
 
 .map-thumbnail iframe {
@@ -88,15 +87,15 @@
 
 .address-details h3 {
   margin: 0;
-  font-size: 1.3em; /* Aumentando o tamanho da fonte do título */
+  font-size: 1.3em;
   color: #333;
-  font-weight: 600; /* Aumentando o peso da fonte */
+  font-weight: 600;
 }
 
 .address-details p {
-  margin: 5px 0; /* Ajustando o espaçamento vertical */
-  font-size: 1em; /* Ajustando o tamanho da fonte */
-  color: #555; /* Suavizando a cor do texto */
+  margin: 5px 0;
+  font-size: 1em;
+  color: #555;
 }
 
 .address-actions {
@@ -110,9 +109,9 @@
   border-radius: 4px;
   cursor: pointer;
   margin-top: 5px;
-  margin-right: 10px; /* Aumentando o espaço à direita */
-  font-size: 1em; /* Ajustando o tamanho da fonte */
-  font-weight: 600; /* Aumentando o peso da fonte */
+  margin-right: 10px;
+  font-size: 1em;
+  font-weight: 600;
   transition: background-color 0.3s ease;
 }
 
@@ -122,7 +121,7 @@
 }
 
 .address-actions button.primary:hover {
-  background-color: #f2dbda; /* Alterando a cor de hover */
+  background-color: #f2dbda;
 }
 
 .address-actions button.secondary {
@@ -131,22 +130,22 @@
 }
 
 .address-actions button.secondary:hover {
-  background-color: #f2dbda; /* Alterando a cor de hover */
+  background-color: #f2dbda;
 }
 
 .filters {
   display: flex;
-  align-items: center; /* Alinhar os itens verticalmente */
+  align-items: center;
   margin-bottom: 20px;
-  border-radius: var(--border-radius); /* Borda arredondada */
-  padding: 10px; /* Espaçamento interno */
-  background-color: #fff; /* Fundo branco */
+  border-radius: var(--border-radius);
+  padding: 10px;
+  background-color: #fff;
 }
 
 .filter-button {
-  flex: 1; /* Ocupar espaço igualmente */
+  flex: 1;
   padding: 10px 20px;
-  border: none; /* Removendo a borda */
+  border: none;
   border-radius: 4px;
   cursor: pointer;
   font-size: 1em;
@@ -161,23 +160,23 @@
 
 .search-bar-container {
   display: flex;
-  align-items: center; /* Alinhar os itens verticalmente */
-  justify-content: space-between; /* Distribuir os itens igualmente horizontalmente */
-  margin-bottom: 20px; /* Adicionando espaço abaixo */
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
 }
 
 .search-bar {
-  width: 100%; /* Definir a largura da barra de pesquisa para 70% */
+  width: 100%;
   padding: 14px;
-  margin-right: 10px; /* Adicionando margem à direita */
+  margin-right: 10px;
   border: 1px solid var(--border-color);
-  border-radius: 6px; /* Suavizando as bordas */
-  font-size: 1.1em; /* Aumentando o tamanho da fonte */
+  border-radius: 6px;
+  font-size: 1.1em;
   box-sizing: border-box;
 }
 
 .add-address-button {
-  padding: 8px 20px; /* Ajustando o tamanho do botão */
+  padding: 8px 20px;
   margin-bottom: 30px;
   border: none;
   border-radius: 4px;
@@ -185,23 +184,21 @@
   font-size: 1em;
   font-weight: 600;
   transition: background-color 0.3s ease;
-  background-color: #4CAF50; /* Cor verde para o botão "Add Address" */
+  background-color: #4CAF50;
   color: white;
 }
 
 .add-address-button:hover {
-  background-color: #45a049; /* Cor mais escura ao passar o mouse */
+  background-color: #45a049;
 }
 
-
-/* Responsividade para telas menores */
 @media screen and (max-width: 768px) {
   .address-list {
-    padding: 20px; /* Ajustando o espaçamento interno */
+    padding: 20px;
   }
 
   .address-card {
-    padding: 16px; /* Ajustando o padding */
+    padding: 16px;
   }
 
   .address-card:hover {
@@ -217,10 +214,10 @@
   }
 
   .address-details h3 {
-    font-size: 1.1em; /* Ajustando o tamanho da fonte */
+    font-size: 1.1em;
   }
 
   .address-details p {
-    font-size: 0.9em; /* Ajustando o tamanho da fonte */
+    font-size: 0.9em;
   }
 }
