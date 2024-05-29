@@ -21,21 +21,24 @@ const App = () => {
   };
 
   return (
-    <div className="app-container">
-      <div className="address-list-container">
-        <AddressList 
-          addresses={addresses} 
-          onEdit={setEditingAddress} 
-          onDelete={handleDeleteAddress}
-          onPinClick={(address) => console.log('Pin clicked for', address)}
-        />
-      </div>
-      <div className="address-form-container">
-        <AddressForm 
-          onSave={editingAddress ? handleEditAddress : handleAddAddress} 
-          address={editingAddress} 
-          onCancel={() => setEditingAddress(null)} 
-        />
+    <div className="body">
+        <h1>Delivery Interplanetário</h1>
+      <div className="app-container">
+        <div className="address-list-container">
+          <AddressList 
+            addresses={addresses} 
+            onEdit={setEditingAddress} 
+            onDelete={handleDeleteAddress}
+            onPinClick={(address) => console.log('Pin clicked for', address)}
+          />
+        </div>
+        <div className="address-form-container">
+          <AddressForm 
+            onSave={editingAddress ? handleEditAddress : handleAddAddress} 
+            address={editingAddress} 
+            onCancel={() => setEditingAddress(null)} 
+          />
+        </div>
       </div>
     </div>
   );

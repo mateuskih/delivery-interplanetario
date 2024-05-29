@@ -59,11 +59,10 @@ const AddressForm = ({ onSave, address, onCancel }) => {
       ...prevState,
       latitude: lat.toString(),
       longitude: lng.toString(),
-      city: '', // Reset city
-      zipCode: '' // Reset zip code
+      city: '',
+      zipCode: ''
     }));
 
-    // Reverse geocode to get address components
     const geocoder = new window.google.maps.Geocoder();
     geocoder.geocode({ location: { lat, lng } }, (results, status) => {
       if (status === "OK") {
